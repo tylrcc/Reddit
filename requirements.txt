@@ -1,0 +1,4 @@
+praw
+transformers
+torch
+pandas
