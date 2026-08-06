@@ -3,7 +3,7 @@ from sentiment import FinBERTSentiment
 from strategy import calculate_scores, get_top_recommendation
 
 def main():
-    print("--- Reddit WallStreetBets Trading Bot ---")
+    print("Reddit WallStreetBets Trading Bot")
     
     # 1. Scrape posts
     print("\n[1] Scraping WallStreetBets...")

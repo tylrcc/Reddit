@@ -3,28 +3,18 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/tylrcc/Reddit/stargazers"><img src="https://img.shields.io/github/stars/tylrcc/Reddit?style=for-the-badge&color=yellow" alt="Stars Badge"/></a>
-  <a href="https://github.com/tylrcc/Reddit/network/members"><img src="https://img.shields.io/github/forks/tylrcc/Reddit?style=for-the-badge&color=orange" alt="Forks Badge"/></a>
-  <a href="https://github.com/tylrcc/Reddit/pulls"><img src="https://img.shields.io/github/issues-pr/tylrcc/Reddit?style=for-the-badge&color=green" alt="Pull Requests Badge"/></a>
-  <a href="https://github.com/tylrcc/Reddit/issues"><img src="https://img.shields.io/github/issues/tylrcc/Reddit?style=for-the-badge&color=red" alt="Issues Badge"/></a>
-  <a href="https://github.com/tylrcc/Reddit/blob/main/LICENSE"><img src="https://img.shields.io/github/license/tylrcc/Reddit?style=for-the-badge&color=blue" alt="License Badge"/></a>
-</p>
-
-<p align="center">
   <em>An automated trading algorithm that scrapes r/WallStreetBets, processes financial text using NLP (FinBERT), and ranks stock tickers based on community sentiment.</em>
 </p>
 
----
-
-## 🚀 Overview
+## Overview
 
 The **Reddit Trading Bot** is a Python-based algorithmic trading tool that attempts to quantify market sentiment on the popular subreddit `r/wallstreetbets`. 
 
-By harnessing the power of [FinBERT](https://huggingface.co/ProsusAI/finbert)—a pre-trained NLP model specifically fine-tuned for financial sentiment classification—the bot scans daily posts, identifies mentioned stock tickers, and scores them as **Bullish** or **Bearish**. 
+By harnessing the power of [FinBERT](https://huggingface.co/ProsusAI/finbert), a pre-trained NLP model specifically fine-tuned for financial sentiment classification, the bot scans daily posts, identifies mentioned stock tickers, and scores them as **Bullish** or **Bearish**. 
 
 > **Disclaimer:** This project was built to test hypotheses around retail trading sentiment and lookahead biases. As demonstrated in extensive backtesting, blindly following retail hype often yields negative alpha. **Use this software strictly for educational and research purposes.**
 
-## 🧠 How the Strategy Works
+## How the Strategy Works
 
 The strategy is built on a simple yet powerful pipeline:
 
@@ -39,7 +29,7 @@ The strategy is built on a simple yet powerful pipeline:
 
 ### Example Output
 ```yaml
---- Reddit WallStreetBets Trading Bot ---
+ Reddit WallStreetBets Trading Bot 
 
 [1] Scraping WallStreetBets...
 Fetched 142 posts mentioning tickers.
@@ -58,15 +48,15 @@ Ticker: AAPL | Bullish: 18 | Bearish: 2 | Score: 16
 Score: 16 (Bullish: 18, Bearish: 2)
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **[Python 3.10+](https://www.python.org/)** - Core programming language
-- **[HuggingFace Transformers](https://huggingface.co/docs/transformers/index)** - For executing FinBERT pipelines
-- **[PyTorch](https://pytorch.org/)** - ML Framework backend for FinBERT
-- **[PRAW](https://praw.readthedocs.io/en/stable/)** - Reddit API Wrapper for data scraping
-- **[Pandas](https://pandas.pydata.org/)** - Data manipulation and tracking
+- **[Python 3.10+](https://www.python.org/)** Core programming language
+- **[HuggingFace Transformers](https://huggingface.co/docs/transformers/index)** For executing FinBERT pipelines
+- **[PyTorch](https://pytorch.org/)** ML Framework backend for FinBERT
+- **[PRAW](https://praw.readthedocs.io/en/stable/)** Reddit API Wrapper for data scraping
+- **[Pandas](https://pandas.pydata.org/)** Data manipulation and tracking
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository:**
    ```bash
@@ -98,14 +88,14 @@ Score: 16 (Bullish: 18, Bearish: 2)
    python main.py
    ```
 
-## 📊 Backtesting Insights & The "Lookahead Bias"
+## Backtesting Insights & The "Lookahead Bias"
 
 When backtesting this strategy, it is incredibly easy to accidentally introduce **Lookahead Bias** (using tomorrow's data to predict today's trades). 
 If the bot observes community reaction *after* a market move has already occurred and uses that to "buy" the stock before the news spread, it fakes an incredibly high return (e.g., +1,000% CAGR).
 When corrected, the reality is that **shorting the most mentioned stocks** or **buying the most hyped stocks** both generally underperform the S&P 500. This bot is a testament to those findings.
 
-## 🤝 Contributing
+## Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/tylrcc/Reddit/issues).
 
-## 📝 License
+## License
 This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
