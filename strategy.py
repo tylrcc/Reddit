@@ -1,10 +1,8 @@
+import logging
+
+logger = logging.getLogger(__name__)
+
 def calculate_scores(analyzed_data):
-    """
-    analyzed_data: list of dicts
-    [
-        {"text": "...", "tickers": ["TSLA"], "sentiment": "bullish"}
-    ]
-    """
     scores = {}
     
     for item in analyzed_data:
@@ -20,7 +18,6 @@ def calculate_scores(analyzed_data):
             else:
                 scores[ticker]["neutral"] += 1
 
-    # Calculate final score: Bullish - Bearish
     for ticker in scores:
         scores[ticker]["score"] = scores[ticker]["bullish"] - scores[ticker]["bearish"]
         

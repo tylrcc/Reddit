@@ -1,0 +1,38 @@
+[
+    {
+        "timestamp": "2026-08-06T05:54:00.978935",
+        "top_ticker": "TSLA",
+        "top_data": {
+            "bullish": 0,
+            "bearish": 0,
+            "neutral": 1,
+            "score": 0
+        },
+        "all_scores": {
+            "TSLA": {
+                "bullish": 0,
+                "bearish": 0,
+                "neutral": 1,
+                "score": 0
+            },
+            "GME": {
+                "bullish": 0,
+                "bearish": 0,
+                "neutral": 1,
+                "score": 0
+            },
+            "SPY": {
+                "bullish": 0,
+                "bearish": 1,
+                "neutral": 0,
+                "score": -1
+            },
+            "AAPL": {
+                "bullish": 0,
+                "bearish": 0,
+                "neutral": 1,
+                "score": 0
+            }
+        }
+    }
+]

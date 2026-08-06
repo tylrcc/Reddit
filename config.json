@@ -1,0 +1,14 @@
+{
+    "reddit": {
+        "subreddit": "wallstreetbets",
+        "fetch_limit": 100,
+        "max_post_age_hours": 24
+    },
+    "sentiment": {
+        "model_name": "ProsusAI/finbert",
+        "max_length": 1500
+    },
+    "output": {
+        "results_file": "results.json"
+    }
+}

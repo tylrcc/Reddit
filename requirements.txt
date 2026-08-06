@@ -2,3 +2,5 @@ praw
 transformers
 torch
 pandas
+yfinance
+pytest

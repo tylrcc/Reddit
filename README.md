@@ -55,6 +55,8 @@ Score: 16 (Bullish: 18, Bearish: 2)
 - **[PyTorch](https://pytorch.org/)** ML Framework backend for FinBERT
 - **[PRAW](https://praw.readthedocs.io/en/stable/)** Reddit API Wrapper for data scraping
 - **[Pandas](https://pandas.pydata.org/)** Data manipulation and tracking
+- **[yfinance](https://pypi.org/project/yfinance/)** Strict market validation for scraped tickers
+- **[Pytest](https://docs.pytest.org/en/stable/)** Unit testing framework
 
 ## Installation & Setup
 
